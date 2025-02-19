@@ -15,9 +15,12 @@ A window will/might appear. Check the box “Always trust this certificate in fu
 3. About FileZilla
 •	The left side is the “Local site:” which is your computer or laptop.  
 •	The right side is the “Remote site:” 
+If you want to update some information, you can modify the files and then upload the files to remote site.
 
 4. Our project
-You can see I have upload our project to 'project' folder. 
-Download the porject code from github to your local computer.
+create a 'project' folder on your local computer.
+Download the code from github to 'project' folder.
 You can use "visual studio code" the open the 'project' folder, modify, update files and upload file through FileZilla client.
 you can open 'index.html' file, and click "RUN" -- "RUN WITHOUT DEBUGGING", and then you can see the website on your browser.
+
+Now, you can test our website as our project!!
