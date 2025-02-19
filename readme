@@ -1,0 +1,23 @@
+1. Download FileZilla client  # Used to transfer files
+mac: https://filezilla-project.org/download.php?type=client
+
+2.Setting Up FileZilla
+Click on “File” - “Site Manager” - “New Site” （website name “csc02.simplystreet.com”）
+Fill out the connection information as follows：
+a.	Host: 		ftp.simplystreet.com
+b.	Port: 		21
+c.	User:		csc##@simplystreet.com
+d.	Password:	LearnWeb##  
+e.	Logon Type:	“Normal” DO NOT CHANGE THIS SETTING!
+Click on “Connect” to test your connection.
+A window will/might appear. Check the box “Always trust this certificate in future sessions.” The click on “OK” to log in.
+
+3. About FileZilla
+•	The left side is the “Local site:” which is your computer or laptop.  
+•	The right side is the “Remote site:” 
+
+4. Our project
+You can see I have upload our project to 'project' folder. 
+Download the porject code from github to your local computer.
+You can use "visual studio code" the open the 'project' folder, modify, update files and upload file through FileZilla client.
+you can open 'index.html' file, and click "RUN" -- "RUN WITHOUT DEBUGGING", and then you can see the website on your browser.
