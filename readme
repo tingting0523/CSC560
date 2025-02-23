@@ -6,7 +6,7 @@ Click on “File” - “Site Manager” - “New Site” （website name “csc
 Fill out the connection information as follows：
 a.	Host: 		ftp.simplystreet.com
 b.	Port: 		21
-c.	User:		csc##@simplystreet.com
+c.	User:		csc02@simplystreet.com
 d.	Password:	LearnWeb##  
 e.	Logon Type:	“Normal” DO NOT CHANGE THIS SETTING!
 Click on “Connect” to test your connection.
