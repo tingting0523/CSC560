@@ -56,7 +56,18 @@
       </style>
    </head>
    <body>
-      <nav class="navbar navbar-expand-sm recipe navbar-light">
+
+      <div id="navbar"></div> 
+ 
+      <script> 
+          fetch('navbar.html') 
+              .then(response => response.text()) 
+              .then(data => { 
+                  document.getElementById('navbar').innerHTML = data; 
+              }) 
+              .catch(error => console.error('Error loading navbar:', error)); 
+      </script> 
+      <!-- <nav class="navbar navbar-expand-sm recipe navbar-light">
          <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -86,7 +97,7 @@
                </ul>
             </div>
          </div>
-      </nav>
+      </nav> -->
       <header>
          <h1>Vegetable Gallery</h1>
          <input type="text" id="searchBox" placeholder="Search for vegetables...">
