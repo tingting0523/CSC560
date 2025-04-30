@@ -13,10 +13,19 @@
             event.preventDefault(); 
             const ageInput = document.getElementById("age");
             const ageValue = parseInt(ageInput.value, 10);
+            const messageInput = document.getElementById("message");
+            const messageValue = messageInput.value.trim();
+            const wordCount = messageValue.split(/\s+/).length;
 
             if (isNaN(ageValue) || ageValue < 0 || ageValue > 100) {
                alert("Please enter a number between 0-100");
                ageInput.focus();
+               return;
+            }
+
+            if (wordCount > 500) {
+               alert("Your message exceeds the 500-word limit. Please shorten it.");
+               messageInput.focus();
                return;
             }
 
