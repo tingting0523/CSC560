@@ -13,10 +13,28 @@
             event.preventDefault(); 
             const ageInput = document.getElementById("age");
             const ageValue = parseInt(ageInput.value, 10);
+            const messageInput = document.getElementById("message");
+            const messageValue = messageInput.value.trim();
+            const wordCount = messageValue.split(/\s+/).length;
 
-            if (isNaN(ageValue) || ageValue < 0 || ageValue > 100) {
-               alert("Please enter a number between 0-100");
+            const ageError = document.getElementById("ageError");
+            ageError.textContent = ""; // Clear previous error message
+
+            if (isNaN(ageValue) || ageValue <= 0) {
+               ageError.textContent = "Age must be greater than 0.";
                ageInput.focus();
+               return;
+            }
+
+            if (ageValue > 100) {
+               ageError.textContent = "Age must be less than or equal to 100.";
+               ageInput.focus();
+               return;
+            }
+
+            if (wordCount > 500) {
+               alert("Your message exceeds the 500-word limit. Please shorten it.");
+               messageInput.focus();
                return;
             }
 
@@ -25,7 +43,18 @@
       </script>
    </head>
    <body>
-      <nav class="navbar navbar-expand-sm recipe navbar-light">
+
+      <div id="navbar"></div> 
+ 
+      <script> 
+          fetch('navbar.html') 
+              .then(response => response.text()) 
+              .then(data => { 
+                  document.getElementById('navbar').innerHTML = data; 
+              }) 
+              .catch(error => console.error('Error loading navbar:', error)); 
+      </script> 
+      <!-- <nav class="navbar navbar-expand-sm recipe navbar-light">
          <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                <span class="navbar-toggler-icon"></span>
@@ -55,7 +84,7 @@
                </ul>
             </div>
          </div>
-      </nav>
+      </nav> -->
 
       <main>
         <p style="text-align: center; font: italic small-caps bold 20px/2 cursive;">Thank you for visiting Chinese Recipes.</p>
@@ -64,19 +93,20 @@
          <section class="contact-form">
             <form id="contactForm" action="/submit" method="post" onsubmit="handleFormSubmit(event)">
                <label for="name">Name<span style="color: red;">*</span>:</label>
-               <input type="text" id="name" name="name" required>
+               <input type="text" id="name" name="name" oninvalid="setCustomValidity('please enter your name')" oninput="setCustomValidity('')" required>
                
                <label for="email">Email<span style="color: red;">*</span>:</label>
-               <input type="email" id="email" name="email" required>
+               <input type="email" id="email" name="email" oninvalid="setCustomValidity('please enter your email')" oninput="setCustomValidity('')" required>
                
                <label for="phone">Phone:</label>
                <input type="tel" id="phone" name="phone">
                
                <label for="age">Age<span style="color: red;">*</span>:</label>
                <input type="number" id="age" name="age" min="0" max="100" required>
+               <span id="ageError" style="color: red;"></span>
                
                <label for="message">Message<span style="color: red;">*</span>:</label>
-               <textarea id="message" name="message" rows="4" required></textarea>
+               <textarea id="message" name="message" rows="4" required oninvalid="setCustomValidity('please enter your Message')" oninput="setCustomValidity('')"></textarea>
                
                <button type="submit">Send Message</button>
             </form>

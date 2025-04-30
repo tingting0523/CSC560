@@ -93,7 +93,18 @@
       </style>
    </head>
    <body>
-      <nav class="navbar navbar-expand-sm recipe navbar-light">
+
+      <div id="navbar"></div> 
+ 
+      <script> 
+          fetch('navbar.html') 
+              .then(response => response.text()) 
+              .then(data => { 
+                  document.getElementById('navbar').innerHTML = data; 
+              }) 
+              .catch(error => console.error('Error loading navbar:', error)); 
+      </script> 
+      <!-- <nav class="navbar navbar-expand-sm recipe navbar-light">
          <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -123,7 +134,7 @@
                </ul>
             </div>
          </div>
-      </nav>
+      </nav> -->
      
       <p></p>
       <div class="text-content">
@@ -132,33 +143,33 @@
 
       <div class="slider">
          <div class="slider-inner">
-            <img src="img/hotpot-meat1.png" alt="Image 1">
-            <img src="img/hotpot-meat2.png" alt="Image 2">
-            <img src="img/hotpot-meat3.png" alt="Image 3">
-            <img src="img/hotpot-staples1.png" alt="Image 4">
-            <img src="img/hotpot-staples2.png" alt="Image 5">
-            <img src="img/hotpot-vegetable0.png" alt="Image 6">
-            <img src="img/hotpot-vegetable1.png" alt="Image 7">
-            <img src="img/hotpot-vegetable2.png" alt="Image 8">
-            <img src="img/hotpot-vegetable3.png" alt="Image 9">
-            <img src="img/hotpot-vegetable4.png" alt="Image 10">
-            <img src="img/hotpot-vegetable5.png" alt="Image 11">
-            <img src="img/hotpot-vegetable6.png" alt="Image 12">
-            <img src="img/hotpot-vegetable7.png" alt="Image 13">
+            <img src="img/hotpot-meat1.png" alt="Chinese Meat Dish 1">
+            <img src="img/hotpot-meat2.png" alt="Chinese Meat Dish 2">
+            <img src="img/hotpot-meat3.png" alt="Chinese Meat Dish 3">
+            <img src="img/hotpot-staples1.png" alt="Hotspot Staples 1">
+            <img src="img/hotpot-staples2.png" alt="Hotspot Staples 2">
+            <img src="img/hotpot-vegetable0.png" alt="Chinese Vegetable Dish 1">
+            <img src="img/hotpot-vegetable1.png" alt="Chinese Vegetable Dish 2">
+            <img src="img/hotpot-vegetable2.png" alt="Chinese Vegetable Dish 3">
+            <img src="img/hotpot-vegetable3.png" alt="Chinese Vegetable Dish 4">
+            <img src="img/hotpot-vegetable4.png" alt="Chinese Vegetable Dish 5">
+            <img src="img/hotpot-vegetable5.png" alt="Chinese Vegetable Dish 6">
+            <img src="img/hotpot-vegetable6.png" alt="Chinese Vegetable Dish 7">
+            <img src="img/hotpot-vegetable7.png" alt="Chinese Vegetable Dish 8">
             <!-- 重复图片以实现无缝滚动 -->
-            <img src="img/hotpot-meat1.png" alt="Image 1">
-            <img src="img/hotpot-meat2.png" alt="Image 2">
-            <img src="img/hotpot-meat3.png" alt="Image 3">
-            <img src="img/hotpot-staples1.png" alt="Image 4">
-            <img src="img/hotpot-staples2.png" alt="Image 5">
-            <img src="img/hotpot-vegetable0.png" alt="Image 6">
-            <img src="img/hotpot-vegetable1.png" alt="Image 7">
-            <img src="img/hotpot-vegetable2.png" alt="Image 8">
-            <img src="img/hotpot-vegetable3.png" alt="Image 9">
-            <img src="img/hotpot-vegetable4.png" alt="Image 10">
-            <img src="img/hotpot-vegetable5.png" alt="Image 11">
-            <img src="img/hotpot-vegetable6.png" alt="Image 12">
-            <img src="img/hotpot-vegetable7.png" alt="Image 13">
+            <img src="img/hotpot-meat1.png" alt="Chinese Meat Dish 1">
+            <img src="img/hotpot-meat2.png" alt="Chinese Meat Dish 2">
+            <img src="img/hotpot-meat3.png" alt="Chinese Meat Dish 3">
+            <img src="img/hotpot-staples1.png" alt="Hotspot Staples 1">
+            <img src="img/hotpot-staples2.png" alt="Hotspot Staples 2">
+            <img src="img/hotpot-vegetable0.png" alt="Chinese Vegetable Dish 1">
+            <img src="img/hotpot-vegetable1.png" alt="Chinese Vegetable Dish 2">
+            <img src="img/hotpot-vegetable2.png" alt="Chinese Vegetable Dish 3">
+            <img src="img/hotpot-vegetable3.png" alt="Chinese Vegetable Dish 4">
+            <img src="img/hotpot-vegetable4.png" alt="Chinese Vegetable Dish 5">
+            <img src="img/hotpot-vegetable5.png" alt="Chinese Vegetable Dish 6">
+            <img src="img/hotpot-vegetable6.png" alt="Chinese Vegetable Dish 7">
+            <img src="img/hotpot-vegetable7.png" alt="Chinese Vegetable Dish 8">
          </div>
       </div>
       <div class="container centered-container">

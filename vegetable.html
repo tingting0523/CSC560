@@ -56,7 +56,18 @@
       </style>
    </head>
    <body>
-      <nav class="navbar navbar-expand-sm recipe navbar-light">
+
+      <div id="navbar"></div> 
+ 
+      <script> 
+          fetch('navbar.html') 
+              .then(response => response.text()) 
+              .then(data => { 
+                  document.getElementById('navbar').innerHTML = data; 
+              }) 
+              .catch(error => console.error('Error loading navbar:', error)); 
+      </script> 
+      <!-- <nav class="navbar navbar-expand-sm recipe navbar-light">
          <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -86,82 +97,82 @@
                </ul>
             </div>
          </div>
-      </nav>
+      </nav> -->
       <header>
          <h1>Vegetable Gallery</h1>
          <input type="text" id="searchBox" placeholder="Search for vegetables...">
       </header>
       <div id="gallery" class="gallery">
          <div class="image-container" onclick="showRecipe('Hot Pepper')">
-            <img src="img/hotpot-vegetable0.png" alt="Image 1" data-tag="Hot Pepper">
+            <img src="img/hotpot-vegetable0.png" alt="Hot Pepper" data-tag="Hot Pepper">
             <p>Hot Pepper</p>
          </div>
          <div class="image-container" onclick="showRecipe('Lettuce')">
-            <img src="img/hotpot-vegetable2.png" alt="Image 2" data-tag="Lettuce">
+            <img src="img/hotpot-vegetable2.png" alt="Lettuce" data-tag="Lettuce">
             <p>Lettuce</p>
          </div>
          <div class="image-container" onclick="showRecipe('Cabbage')">
-            <img src="img/hotpot-vegetable3.png" alt="Image 3" data-tag="Cabbage">
+            <img src="img/hotpot-vegetable3.png" alt="Cabbage" data-tag="Cabbage">
             <p>Cabbage</p>
          </div>
          <div class="image-container" onclick="showRecipe('Mushroom')">
-            <img src="img/hotpot-vegetable4.png" alt="Image 4" data-tag="Mushroom">
+            <img src="img/hotpot-vegetable4.png" alt="Mushroom" data-tag="Mushroom">
             <p>Mushroom</p>
          </div>
          <div class="image-container" onclick="showRecipe('Kelp')">
-            <img src="img/hotpot-vegetable5.png" alt="Image 5" data-tag="Kelp">
+            <img src="img/hotpot-vegetable5.png" alt="Kelp" data-tag="Kelp">
             <p>Kelp</p>
          </div>
          <div class="image-container" onclick="showRecipe('Fermented Cabbage')">
-            <img src="img/hotpot-vegetable6.png" alt="Image 6" data-tag="Fermented Cabbage">
+            <img src="img/hotpot-vegetable6.png" alt="Fermented Cabbage" data-tag="Fermented Cabbage">
             <p>Fermented Cabbage</p>
          </div>
          <div class="image-container" onclick="showRecipe('Spinach')">
-            <img src="img/vegetable-Spinach.png" alt="Image 7" data-tag="Spinach">
+            <img src="img/vegetable-Spinach.png" alt="Spinach" data-tag="Spinach">
             <p>Spinach</p>
          </div>
          <div class="image-container" onclick="showRecipe('Broccoli')">
-            <img src="img/vegetable-Broccoli.png" alt="Image 8" data-tag="Broccoli">
+            <img src="img/vegetable-Broccoli.png" alt="Broccoli" data-tag="Broccoli">
             <p>Broccoli</p>
          </div>
          <div class="image-container" onclick="showRecipe('Potato')">
-            <img src="img/vegetable-Potato.png" alt="Image 9" data-tag="Potato">
+            <img src="img/vegetable-Potato.png" alt="Potato" data-tag="Potato">
             <p>Potato</p>
          </div>
          <div class="image-container" onclick="showRecipe('Sweet Potato')">
-            <img src="img/vegetable-Sweet Potato.png" alt="Image 10" data-tag="Sweet Potato">
+            <img src="img/vegetable-Sweet Potato.png" alt="Sweet Potato" data-tag="Sweet Potato">
             <p>Sweet Potato</p>
          </div>
          <div class="image-container" onclick="showRecipe('Onion')">
-            <img src="img/vegetable-Onion.png" alt="Image 11" data-tag="Onion">
+            <img src="img/vegetable-Onion.png" alt="Onion" data-tag="Onion">
             <p>Onion</p>
          </div>
          <div class="image-container" onclick="showRecipe('Tomato')">
-            <img src="img/vegetable-Tomato.png" alt="Image 12" data-tag="Tomato">
+            <img src="img/vegetable-Tomato.png" alt="Tomato" data-tag="Tomato">
             <p>Tomato</p>
          </div>
          <div class="image-container" onclick="showRecipe('Cucumber')">
-            <img src="img/vegetable-Cucumber.png" alt="Image 13" data-tag="Cucumber">
+            <img src="img/vegetable-Cucumber.png" alt="Cucumber" data-tag="Cucumber">
             <p>Cucumber</p>
          </div>
          <div class="image-container" onclick="showRecipe('Corn')">
-            <img src="img/vegetable-Corn.png" alt="Image 14" data-tag="Corn">
+            <img src="img/vegetable-Corn.png" alt="Corn" data-tag="Corn">
             <p>Corn</p>
          </div>
          <div class="image-container" onclick="showRecipe('Asparagus')">
-            <img src="img/vegetable-Asparagus.png" alt="Image 15" data-tag="Asparagus">
+            <img src="img/vegetable-Asparagus.png" alt="Asparagus" data-tag="Asparagus">
             <p>Asparagus</p>
          </div>
          <div class="image-container" onclick="showRecipe('Radish')">
-          <img src="img/vegetable-Radish.png" alt="Image 16" data-tag="Radish">
+          <img src="img/vegetable-Radish.png" alt="Radish" data-tag="Radish">
           <p>Radish</p>
          </div>
          <div class="image-container" onclick="showRecipe('Bell Pepper')">
-          <img src="img/vegetable-Bell Pepper.png" alt="Image 17" data-tag="Bell Pepper">
+          <img src="img/vegetable-Bell Pepper.png" alt="Bell Pepper" data-tag="Bell Pepper">
           <p>Bell Pepper</p>
          </div>
          <div class="image-container" onclick="showRecipe('Peas')">
-          <img src="img/vegetable-Peas.png" alt="Image 18" data-tag="Peas">
+          <img src="img/vegetable-Peas.png" alt="Peas" data-tag="Peas">
           <p>Peas</p>
          </div>
          <!-- Add more images as needed -->

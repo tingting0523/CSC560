@@ -17,7 +17,18 @@
     </head>
 
     <body>
-            <nav class="navbar navbar-expand-sm pizza navbar-dark">
+
+      <div id="navbar"></div> 
+ 
+      <script> 
+          fetch('navbar.html') 
+              .then(response => response.text()) 
+              .then(data => { 
+                  document.getElementById('navbar').innerHTML = data; 
+              }) 
+              .catch(error => console.error('Error loading navbar:', error)); 
+      </script> 
+            <!-- <nav class="navbar navbar-expand-sm pizza navbar-dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="index.php">Home LOGO</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -43,7 +54,7 @@
                     </ul>
                   </div>
                 </div>
-              </nav>
+              </nav> -->
 
 
         <div id="main" class="container-fluid">
